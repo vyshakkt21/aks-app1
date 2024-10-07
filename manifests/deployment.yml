@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aksnginxapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aksnginxapp
+  template:
+    metadata:
+      labels:
+        app: aksnginxapp 
+    spec:
+      containers:
+        - name: aksnginxapp 
+          image: vyshakaks.azurecr.io/aksnginxapp
+          ports:
+          - containerPort: 80
