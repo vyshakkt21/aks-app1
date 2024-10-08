@@ -24,12 +24,11 @@ stages:
         #Task1 : Build Docker image and push it to ACR
         - task: Docker@2
           inputs:
-            containerRegistry: 'vyshakaks'
+            containerRegistry: 'ACR SPN'
             repository: 'custome2nginxapp1'
             command: 'buildAndPush'
             Dockerfile: '**/Dockerfile'
-            tags: 
-              $(tag)
+            tags: '$(tag)'
               #$(Build.SourceVersion)
     
       #Task2 : Copy Kube manifest files to artifactory
