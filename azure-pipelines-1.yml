@@ -13,11 +13,11 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-  - stage: Build Stage
-    displayName: Build Stage
+  - stage: Build_Stage
+    displayName: Build_Stage
     jobs:
      - job : Build
-       displayName: Build stage
+       displayName: Build_stage
        pool: 
         vmImage: "ubuntu-latest"
        steps:
