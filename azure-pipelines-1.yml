@@ -28,8 +28,9 @@ stages:
             repository: 'custome2nginxapp1'
             command: 'buildAndPush'
             Dockerfile: '**/Dockerfile'
-            tags: '$(tag)'
-              #$(Build.SourceVersion)
+            tags: | 
+              '$(tag)'
+              '$(Build.SourceVersion)'
     
       #Task2 : Copy Kube manifest files to artifactory
         - task: CopyFiles@2
