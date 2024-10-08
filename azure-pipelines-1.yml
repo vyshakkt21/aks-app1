@@ -30,7 +30,7 @@ stages:
             Dockerfile: '**/Dockerfile'
             tags: |
               $(tag)
-              $(Build.SourceVersion)
+             # $(Build.SourceVersion)
     
       #Task2 : Copy Kube manifest files to artifactory
         - task: CopyFiles@2
